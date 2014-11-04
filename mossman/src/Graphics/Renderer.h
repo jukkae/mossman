@@ -19,6 +19,6 @@ public:
 };
 
 } /* namespace Graphics */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* MOSSMAN_SRC_GRAPHICS_RENDERER_H_ */

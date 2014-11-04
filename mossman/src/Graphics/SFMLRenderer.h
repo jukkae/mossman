@@ -23,6 +23,6 @@ protected:
 };
 
 } /* namespace Graphics */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* MOSSMAN_SRC_GRAPHICS_SFMLRENDERER_H_ */

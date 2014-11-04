@@ -34,4 +34,4 @@ void JuliaScene::deactivated() {
 
 } /* namespace Julia */
 } /* namespace Scenes */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */

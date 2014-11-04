@@ -60,4 +60,4 @@ void SceneManager::renderActiveScene() {
 }
 
 } /* namespace Core */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */

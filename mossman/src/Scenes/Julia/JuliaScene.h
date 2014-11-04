@@ -29,6 +29,6 @@ public:
 
 } /* namespace Julia */
 } /* namespace Scenes */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* SCENES_JULIA_JULIASCENE_H_ */

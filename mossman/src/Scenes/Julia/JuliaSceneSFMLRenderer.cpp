@@ -64,4 +64,4 @@ void JuliaSceneSFMLRenderer::render() {
 
 } /* namespace Julia */
 } /* namespace Scenes */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */

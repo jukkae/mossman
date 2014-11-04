@@ -24,6 +24,6 @@ public:
 };
 
 } /* namespace Core */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* MOSSMAN_SRC_CORE_SCENE_H_ */

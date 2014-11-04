@@ -39,6 +39,6 @@ private:
 };
 
 } /* namespace Core */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* MOSSMAN_SRC_CORE_SCENEMANAGER_H_ */

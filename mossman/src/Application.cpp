@@ -57,4 +57,4 @@ std::shared_ptr<sf::RenderWindow> Application::getRenderContext() const {
 	return mWindow;
 }
 
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */

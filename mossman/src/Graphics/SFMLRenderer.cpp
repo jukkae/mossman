@@ -21,4 +21,4 @@ SFMLRenderer::~SFMLRenderer() {
 }
 
 } /* namespace Graphics */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */

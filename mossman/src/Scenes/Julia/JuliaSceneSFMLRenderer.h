@@ -37,6 +37,6 @@ private:
 
 } /* namespace Julia */
 } /* namespace Scenes */
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* MOSSMAN_SRC_SCENES_JULIA_JULIASCENESFMLRENDERER_H_ */

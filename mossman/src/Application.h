@@ -42,6 +42,6 @@ private:
 	bool mQuitSignaled;
 };
 
-} /* namespace IntoDangerzone */
+} /* namespace Mossman */
 
 #endif /* MOSSMAN_SRC_APPLICATION_H_ */
