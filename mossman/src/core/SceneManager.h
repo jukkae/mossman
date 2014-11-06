@@ -10,14 +10,12 @@
 
 #include <vector>
 #include <memory>
-#include "../Graphics/SceneRenderer.h"
-#include "../Graphics/Renderer.h"
 
-namespace Mossman {
-namespace Core {
+#include "Renderer.h"
+
+namespace mossman {
 
 class Scene;
-using namespace Mossman::Graphics;
 
 class SceneManager {
 public:
@@ -38,7 +36,6 @@ private:
 	Renderer* mActiveRenderer;
 };
 
-} /* namespace Core */
-} /* namespace Mossman */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_CORE_SCENEMANAGER_H_ */

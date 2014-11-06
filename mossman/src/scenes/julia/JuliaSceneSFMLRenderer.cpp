@@ -8,12 +8,12 @@
 #include "JuliaSceneSFMLRenderer.h"
 #include <iostream>
 
-namespace Mossman {
-namespace Scenes {
-namespace Julia {
+namespace mossman {
+namespace scenes {
+namespace julia {
 
 JuliaSceneSFMLRenderer::JuliaSceneSFMLRenderer(std::shared_ptr<sf::RenderWindow> context, JuliaScene* scene) :
-		SFMLRenderer(context),
+		graphics::SFMLRenderer(context),
 		SceneRenderer<JuliaScene>(scene)
 {
 	if(!mShader.loadFromFile("res/scenes/julia/julia.frag", sf::Shader::Fragment)) {
@@ -62,6 +62,6 @@ void JuliaSceneSFMLRenderer::render() {
 	std::cout << "OK" << std::endl;
 }
 
-} /* namespace Julia */
-} /* namespace Scenes */
-} /* namespace Mossman */
+} /* namespace julia */
+} /* namespace scenes */
+} /* namespace mossman */

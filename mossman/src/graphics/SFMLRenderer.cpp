@@ -5,12 +5,12 @@
  *      Author: ville
  */
 
+#include "SFMLRenderer.h"
 #include <SFML/Graphics.hpp>
 #include <memory>
-#include "SFMLRenderer.h"
 
-namespace Mossman {
-namespace Graphics {
+namespace mossman {
+namespace graphics {
 
 SFMLRenderer::SFMLRenderer(std::shared_ptr<sf::RenderWindow> context) : mContext(context) {
 
@@ -20,5 +20,5 @@ SFMLRenderer::~SFMLRenderer() {
 	// TODO Auto-generated destructor stub
 }
 
-} /* namespace Graphics */
-} /* namespace Mossman */
+} /* namespace graphics */
+} /* namespace mossman */

@@ -8,8 +8,7 @@
 #ifndef MOSSMAN_SRC_GRAPHICS_RENDERER_H_
 #define MOSSMAN_SRC_GRAPHICS_RENDERER_H_
 
-namespace Mossman {
-namespace Graphics {
+namespace mossman {
 
 class Renderer {
 public:
@@ -18,7 +17,6 @@ public:
 	virtual void render() = 0;
 };
 
-} /* namespace Graphics */
-} /* namespace Mossman */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_GRAPHICS_RENDERER_H_ */

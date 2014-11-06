@@ -11,8 +11,8 @@
 #include <memory>
 #include <SFML/Graphics.hpp>
 
-namespace Mossman {
-namespace Graphics {
+namespace mossman {
+namespace graphics {
 
 class SFMLRenderer {
 public:
@@ -22,7 +22,7 @@ protected:
 	std::shared_ptr<sf::RenderWindow> mContext;
 };
 
-} /* namespace Graphics */
-} /* namespace Mossman */
+} /* namespace graphics */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_GRAPHICS_SFMLRENDERER_H_ */

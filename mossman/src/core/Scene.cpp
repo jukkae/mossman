@@ -7,8 +7,7 @@
 
 #include "Scene.h"
 
-namespace Mossman {
-namespace Core {
+namespace mossman {
 
 Scene::Scene() {
 	// TODO Auto-generated constructor stub
@@ -19,5 +18,4 @@ Scene::~Scene() {
 	// TODO Auto-generated destructor stub
 }
 
-} /* namespace Core */
-} /* namespace Mossman */
+} /* namespace mossman */

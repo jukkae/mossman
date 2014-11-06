@@ -8,9 +8,8 @@
 #include "JuliaScene.h"
 #include <iostream>
 
-namespace Mossman {
-namespace Scenes {
-namespace Julia {
+namespace mossman {
+namespace scenes {
 
 JuliaScene::JuliaScene() {
 
@@ -32,6 +31,5 @@ void JuliaScene::deactivated() {
 
 }
 
-} /* namespace Julia */
-} /* namespace Scenes */
-} /* namespace Mossman */
+} /* namespace scenes */
+} /* namespace mossman */

@@ -8,10 +8,7 @@
 #ifndef MOSSMAN_SRC_CORE_SCENE_H_
 #define MOSSMAN_SRC_CORE_SCENE_H_
 
-#include "../Application.h"
-
-namespace Mossman {
-namespace Core {
+namespace mossman {
 
 class Scene {
 public:
@@ -23,7 +20,6 @@ public:
 	virtual void deactivated() = 0;
 };
 
-} /* namespace Core */
-} /* namespace Mossman */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_CORE_SCENE_H_ */

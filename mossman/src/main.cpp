@@ -6,13 +6,15 @@
  */
 
 #include <chrono>
-#include "Application.h"
+#include "core/Application.h"
+
+using namespace mossman;
 
 int main()
 {
 	using namespace std::chrono;
 
-	Mossman::Application app;
+	mossman::Application app;
 	app.init();
 
 	auto currentTime = high_resolution_clock::now();

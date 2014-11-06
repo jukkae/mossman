@@ -8,14 +8,10 @@
 #ifndef SCENES_JULIA_JULIASCENE_H_
 #define SCENES_JULIA_JULIASCENE_
 
-#include "../../Core/Scene.h"
-#include "JuliaSceneSFMLRenderer.h"
+#include "core/Scene.h"
 
-namespace Mossman {
-namespace Scenes {
-namespace Julia {
-
-using namespace Mossman::Core;
+namespace mossman {
+namespace scenes {
 
 class JuliaScene : public Scene {
 public:
@@ -27,8 +23,7 @@ public:
 	virtual void deactivated();
 };
 
-} /* namespace Julia */
-} /* namespace Scenes */
-} /* namespace Mossman */
+} /* namespace scenes */
+} /* namespace mossman */
 
 #endif /* SCENES_JULIA_JULIASCENE_H_ */

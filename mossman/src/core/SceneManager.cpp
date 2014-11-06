@@ -8,8 +8,7 @@
 #include "SceneManager.h"
 #include "Scene.h"
 
-namespace Mossman {
-namespace Core {
+namespace mossman {
 
 SceneManager::SceneManager() : mActiveScene(nullptr), mActiveRenderer(nullptr) {
 	// TODO Auto-generated constructor stub
@@ -59,5 +58,4 @@ void SceneManager::renderActiveScene() {
 	mActiveRenderer->render();
 }
 
-} /* namespace Core */
-} /* namespace Mossman */
+} /* namespace mossman */

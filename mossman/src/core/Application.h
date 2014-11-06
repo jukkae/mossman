@@ -11,11 +11,9 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 
-#include "Core/SceneManager.h"
+#include "SceneManager.h"
 
-namespace Mossman {
-
-using namespace Mossman::Core;
+namespace mossman {
 
 class Application {
 public:
@@ -42,6 +40,6 @@ private:
 	bool mQuitSignaled;
 };
 
-} /* namespace Mossman */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_APPLICATION_H_ */

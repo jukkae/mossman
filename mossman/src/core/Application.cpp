@@ -6,10 +6,13 @@
  */
 
 #include "Application.h"
-#include "Scenes/Julia/JuliaScene.h"
+
 #include <memory>
 
-namespace Mossman {
+#include "scenes/julia/JuliaSceneSFMLRenderer.h"
+#include "scenes/JuliaScene.h"
+
+namespace mossman {
 
 Application::Application() : mWindow(nullptr), mQuitSignaled(false) {
 	// TODO Auto-generated constructor stub
@@ -21,15 +24,15 @@ Application::~Application() {
 }
 
 void Application::init() {
-	using namespace Mossman::Scenes::Julia;
-	mWindow = std::make_shared<sf::RenderWindow>(sf::VideoMode(1280, 1024), "SFML works!");
+	using namespace mossman::scenes;
+	mWindow = std::make_shared<sf::RenderWindow>(sf::VideoMode(1280, 1024), "mossman");
 	mWindow->setVerticalSyncEnabled(true);
 
 	JuliaScene* juliaScene = new JuliaScene();
 
-	JuliaSceneSFMLRenderer* juliaSceneRenderer = new JuliaSceneSFMLRenderer(mWindow, juliaScene);
+	julia::JuliaSceneSFMLRenderer* juliaSceneRenderer = new julia::JuliaSceneSFMLRenderer(mWindow, juliaScene);
 
-	int i = mSceneManager.addScene(juliaScene, juliaSceneRenderer);
+	mSceneManager.addScene(juliaScene, juliaSceneRenderer);
 }
 
 void Application::update(double dt) {
@@ -57,4 +60,4 @@ std::shared_ptr<sf::RenderWindow> Application::getRenderContext() const {
 	return mWindow;
 }
 
-} /* namespace Mossman */
+} /* namespace mossman */

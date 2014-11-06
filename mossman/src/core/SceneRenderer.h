@@ -10,8 +10,7 @@
 
 #include "Renderer.h"
 
-namespace Mossman {
-namespace Graphics {
+namespace mossman {
 
 template<class TScene>
 class SceneRenderer : public Renderer {
@@ -25,7 +24,6 @@ protected:
 	TScene* mScene;
 };
 
-} /* namespace Graphics */
-} /* namespace Mossman */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_GRAPHICS_SCENERENDERER_H_ */

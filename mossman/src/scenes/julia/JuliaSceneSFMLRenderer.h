@@ -11,18 +11,17 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
-#include "../../Graphics/SFMLRenderer.h"
-#include "../../Graphics/SceneRenderer.h"
+#include "graphics/SFMLRenderer.h"
+#include "core/SceneRenderer.h"
 
-namespace Mossman {
-namespace Scenes {
-namespace Julia {
+namespace mossman {
+namespace scenes {
 
 class JuliaScene;
 
-using namespace Mossman::Graphics;
+namespace julia {
 
-class JuliaSceneSFMLRenderer : public SFMLRenderer, public SceneRenderer<JuliaScene> {
+class JuliaSceneSFMLRenderer : public graphics::SFMLRenderer, public SceneRenderer<JuliaScene> {
 public:
 	JuliaSceneSFMLRenderer(std::shared_ptr<sf::RenderWindow> context, JuliaScene* scene);
 	virtual ~JuliaSceneSFMLRenderer();
@@ -35,8 +34,8 @@ private:
 	float mShrink;
 };
 
-} /* namespace Julia */
-} /* namespace Scenes */
-} /* namespace Mossman */
+} /* namespace julia */
+} /* namespace scenes */
+} /* namespace mossman */
 
 #endif /* MOSSMAN_SRC_SCENES_JULIA_JULIASCENESFMLRENDERER_H_ */
