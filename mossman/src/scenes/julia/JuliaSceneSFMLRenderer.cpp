@@ -7,6 +7,7 @@
 
 #include "JuliaSceneSFMLRenderer.h"
 #include <iostream>
+#include <cmath>
 
 namespace mossman {
 namespace scenes {
