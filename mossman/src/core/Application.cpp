@@ -12,6 +12,7 @@
 #include "scenes/julia/JuliaSceneSFMLRenderer.h"
 #include "scenes/JuliaScene.h"
 
+#include "scenes/gol/GolSceneSFMLRenderer.h"
 #include "scenes/GolScene.h"
 
 namespace mossman {
