@@ -21,6 +21,7 @@ JuliaScene::~JuliaScene() {
 }
 
 void JuliaScene::update(double dt) {
+
 }
 
 void JuliaScene::activated() {
