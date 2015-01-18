@@ -1,27 +1,26 @@
 /*
- * JuliaSceneSFMLRenderer.cpp
- *
- *  Created on: Nov 3, 2014
- *      Author: ville
+ * GolSceneSFMLRenderer.cpp
+ * Created on: 18.1.2015
+ *     author: jukka
  */
 
-#include "JuliaSceneSFMLRenderer.h"
+#include "GolSceneSFMLRenderer.h"
 #include <iostream>
 #include <cmath>
 
 namespace mossman {
 namespace scenes {
-namespace julia {
+namespace gol {
 
-JuliaSceneSFMLRenderer::JuliaSceneSFMLRenderer(std::shared_ptr<sf::RenderWindow> context, JuliaScene* scene) :
+GolSceneSFMLRenderer::GolSceneSFMLRenderer(std::shared_ptr<sf::RenderWindow> context, GolScene* scene) :
 		graphics::SFMLRenderer(context),
-		SceneRenderer<JuliaScene>(scene)
+		SceneRenderer<GolScene>(scene)
 {
-	if(!mShader.loadFromFile("res/scenes/julia/julia.frag", sf::Shader::Fragment)) {
+	if(!mShader.loadFromFile("res/scenes/gol/gol.frag", sf::Shader::Fragment)) {
 		std::cout << "UH OH!" << std::endl;
 	}
 
-	mTexture.loadFromFile("res/scenes/julia/texture.png");
+	mTexture.loadFromFile("res/scenes/gol/texture.png");
 
 	c = sf::Vector2f(0.5, 0.5);
 
@@ -48,11 +47,11 @@ JuliaSceneSFMLRenderer::JuliaSceneSFMLRenderer(std::shared_ptr<sf::RenderWindow>
 
 }
 
-JuliaSceneSFMLRenderer::~JuliaSceneSFMLRenderer() {
+GolSceneSFMLRenderer::~GolSceneSFMLRenderer() {
 	// TODO Auto-generated destructor stub
 }
 
-void JuliaSceneSFMLRenderer::render() {
+void GolSceneSFMLRenderer::render() {
 	float x = c.x, y = c.y;
 	float angularVelocity = 0.05;
 	c.x = x * std::cos(angularVelocity) - y * std::sin(angularVelocity);
@@ -63,6 +62,6 @@ void JuliaSceneSFMLRenderer::render() {
 	std::cout << "OK" << std::endl;
 }
 
-} /* namespace julia */
+} /* namespace gol */
 } /* namespace scenes */
 } /* namespace mossman */
