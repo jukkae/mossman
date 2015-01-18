@@ -12,6 +12,8 @@
 #include "scenes/julia/JuliaSceneSFMLRenderer.h"
 #include "scenes/JuliaScene.h"
 
+#include "scenes/GolScene.h"
+
 namespace mossman {
 
 Application::Application() : mWindow(nullptr), mQuitSignaled(false) {
@@ -33,6 +35,11 @@ void Application::init() {
 	julia::JuliaSceneSFMLRenderer* juliaSceneRenderer = new julia::JuliaSceneSFMLRenderer(mWindow, juliaScene);
 
 	mSceneManager.addScene(juliaScene, juliaSceneRenderer);
+
+	GolScene* golScene = new GolScene();
+	gol::GolSceneSFMLRenderer* golSceneRenderer = new gol::GolSceneSFMLRenderer(mWindow, golScene);
+
+	mSceneManager.addScene(golScene, golSceneRenderer);
 }
 
 void Application::update(double dt) {
