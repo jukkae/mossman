@@ -60,7 +60,7 @@ void JuliaSceneSFMLRenderer::render() {
 
 	mShader.setParameter("c", c);
 	mContext->draw(mVertex, &mShader);
-	std::cout << "OK" << std::endl;
+	//std::cout << "OK" << std::endl;
 }
 
 } /* namespace julia */

@@ -10,6 +10,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <memory>
+#include "RtAudio.h" //TODO seems reasonable to include here, right?
+// not sure about RtAudio being under core, though
 
 #include "SceneManager.h"
 
