@@ -31,6 +31,9 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.862521023" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.1136721755" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.c++11" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.other.other.813907589" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.include.files.755325272" superClass="gnu.cpp.compiler.option.include.files" valueType="includeFiles">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/inc/RtAudio.h}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1051933332" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.872960687" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
@@ -44,11 +47,13 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.780689922" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.644952612" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base">
 								<option id="gnu.cpp.link.option.libs.990182589" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="rtaudio"/>
 									<listOptionValue builtIn="false" value="sfml-graphics"/>
 									<listOptionValue builtIn="false" value="sfml-window"/>
 									<listOptionValue builtIn="false" value="sfml-system"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.235381934" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib}&quot;"/>
 									<listOptionValue builtIn="false" value="/Library"/>
 									<listOptionValue builtIn="false" value="/usr/local/lib"/>
 									<listOptionValue builtIn="false" value="/usr/local/include"/>
@@ -145,10 +150,16 @@
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.408162626;cdt.managedbuild.config.gnu.exe.debug.408162626.;cdt.managedbuild.tool.gnu.c.compiler.base.872960687;cdt.managedbuild.tool.gnu.c.compiler.input.1273301942">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.408162626;cdt.managedbuild.config.gnu.exe.debug.408162626.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1944339552;cdt.managedbuild.tool.gnu.c.compiler.input.758139659">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1653786408;cdt.managedbuild.config.gnu.exe.release.1653786408.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.2124716617;cdt.managedbuild.tool.gnu.c.compiler.input.2004893846">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.408162626;cdt.managedbuild.config.gnu.exe.debug.408162626.;cdt.managedbuild.tool.gnu.cpp.compiler.base.692765292;cdt.managedbuild.tool.gnu.cpp.compiler.input.1051933332">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.408162626;cdt.managedbuild.config.gnu.exe.debug.408162626.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2092976390;cdt.managedbuild.tool.gnu.cpp.compiler.input.1167623870">
