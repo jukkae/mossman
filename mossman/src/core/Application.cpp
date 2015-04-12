@@ -17,6 +17,8 @@
 
 namespace mossman {
 
+RtAudio audio;
+
 Application::Application() :
 		mWindow(nullptr), mQuitSignaled(false) {
 	// TODO Auto-generated constructor stub
@@ -64,13 +66,10 @@ void Application::init() {
 	std::vector<RtAudio::Api> apis;
 	RtAudio::getCompiledApi(apis);
 
-	std::cout << "\nRtAudio Version " << RtAudio::getVersion() << std::endl;
-
 	std::cout << "\nCompiled APIs:\n";
 	for (unsigned int i = 0; i < apis.size(); i++)
 		std::cout << "  " << apiMap[apis[i]] << std::endl;
 
-	RtAudio audio;
 	RtAudio::DeviceInfo info;
 
 	std::cout << "\nCurrent API: " << apiMap[audio.getCurrentApi()]
