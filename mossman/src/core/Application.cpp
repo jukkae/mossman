@@ -15,8 +15,8 @@
 #include "scenes/gol/GolSceneSFMLRenderer.h"
 #include "scenes/GolScene.h"
 
-typedef float MY_TYPE; // buffer format
-#define FORMAT RTAUDIO_FLOAT64
+typedef unsigned short MY_TYPE; // buffer format
+#define FORMAT RTAUDIO_SINT8
 
 namespace mossman {
 
@@ -91,7 +91,7 @@ void Application::init() {
 
 	// rtaudio buffer stuff starts here
 
-	double time = 0.5;
+	double time = 0.1;
 
 	channels = 2;
 	fs = 44100;
@@ -106,12 +106,10 @@ void Application::init() {
 
 	data.buffer = 0;
 	try {
-		// TODO open this stream into some stream reader which handles buffering
 		adc.openStream( NULL, &iParams, FORMAT, fs, &bufferFrames, &input,
 				(void *) &data);
 	} catch (RtAudioError& e) {
 		std::cout << '\n' << e.getMessage() << '\n' << std::endl;
-		// goto cleanup; I don't like goto.
 	}
 
 	data.bufferBytes = bufferFrames * channels * sizeof(MY_TYPE);
@@ -230,7 +228,7 @@ void Application::update(double dt) {
 	mWindow->display();
 
 	// rtaudio: read stuff from buffer
-	std::cout << "\nBuffer data:\n";
+	std::cout << "\n";
 	for (int i = 0; i < data.totalFrames * channels; i++) {
 		std::cout << data.buffer[i] << " ";
 	}
