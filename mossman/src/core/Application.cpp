@@ -15,8 +15,8 @@
 #include "scenes/gol/GolSceneSFMLRenderer.h"
 #include "scenes/GolScene.h"
 
-typedef signed short MY_TYPE;
-#define FORMAT RTAUDIO_SINT16
+typedef float MY_TYPE; // buffer format
+#define FORMAT RTAUDIO_FLOAT64
 
 namespace mossman {
 
@@ -30,12 +30,14 @@ struct InputData {
 };
 
 // Interleaved buffers for rtaudio
+// Callback function where data from physical buffer is copied to logical buffer
 int input(void * /*outputBuffer*/, void *inputBuffer,
 		unsigned int nBufferFrames, double /*streamTime*/,
 		RtAudioStreamStatus /*status*/, void *data) {
 	InputData *iData = (InputData *) data;
 
 	// Simply copy the data to our allocated buffer.
+	// TODO smarter handling
 	unsigned int frames = nBufferFrames;
 	if (iData->frameCounter + nBufferFrames > iData->totalFrames) {
 		frames = iData->totalFrames - iData->frameCounter;
@@ -46,8 +48,10 @@ int input(void * /*outputBuffer*/, void *inputBuffer,
 	memcpy(iData->buffer + offset, inputBuffer, iData->bufferBytes);
 	iData->frameCounter += frames;
 
-	if (iData->frameCounter >= iData->totalFrames)
-		return 2;
+	// when buffer fills, start over again
+	if (iData->frameCounter >= iData->totalFrames){
+		iData->frameCounter = 0;
+	}
 	return 0;
 }
 
@@ -87,7 +91,7 @@ void Application::init() {
 
 	// rtaudio buffer stuff starts here
 
-	double time = 2.0;
+	double time = 0.5;
 
 	channels = 2;
 	fs = 44100;
@@ -102,6 +106,7 @@ void Application::init() {
 
 	data.buffer = 0;
 	try {
+		// TODO open this stream into some stream reader which handles buffering
 		adc.openStream( NULL, &iParams, FORMAT, fs, &bufferFrames, &input,
 				(void *) &data);
 	} catch (RtAudioError& e) {
@@ -225,9 +230,10 @@ void Application::update(double dt) {
 	mWindow->display();
 
 	// rtaudio: read stuff from buffer
-	// TODO try and get the good stuff out of there
 	std::cout << "\nBuffer data:\n";
-	std::cout << data.buffer[data.totalFrames];
+	for (int i = 0; i < data.totalFrames * channels; i++) {
+		std::cout << data.buffer[i] << " ";
+	}
 
 }
 
